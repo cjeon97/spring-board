@@ -1,0 +1,15 @@
+package examspring01;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MemberDao {
+	
+	private static long sequence = 1;
+	private Map<String, Member> database = new HashMap<>();
+	
+	public Member selectOne(String memberid) {
+		database.
+	}
+	
+}

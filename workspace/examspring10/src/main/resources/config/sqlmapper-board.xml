@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.repository.board">
+
+	<select id="selectAll" resultType="board">
+		select * from MYBOARD order by "NUM" desc
+	</select>
+	
+	<select id="selectOne" parameterType="Long" resultType="board">
+		select NUM, TITLE, CONTENT, REGDATE, READCNT from MYBOARD where NUM=#{num}
+	</select>
+	
+	<insert id="insert" parameterType="board">
+		insert into MYBOARD (NUM, TITLE, CONTENT, REGDATE, READCNT)
+			values (MYBOARD_SEQ.nextval, #{title}, #{content}, systimestamp, 0)
+	</insert>
+	
+	<update id="updateCnt" parameterType="Long">
+		update MYBOARD set READCNT=READCNT+1 where NUM=#{num}
+	</update>
+
+	<update id="update" parameterType="board">
+		update MYBOARD set TITLE=#{title}, CONTENT=#{content} where NUM=#{num}
+	</update>
+	
+	<delete id="delete" parameterType="Long">
+		delete from MYBOARD where NUM=#{num}
+	</delete>
+
+</mapper>
+
+
+
+
+
+
+
+

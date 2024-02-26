@@ -1,0 +1,19 @@
+package calculator;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		GenericXmlApplicationContext ctx =
+				new GenericXmlApplicationContext(
+						"classpath:appContext3.xml");
+		
+		Calculator greeter1 = ctx.getBean("greeter1", Calculator.class);
+		Calculator greeter2 = ctx.getBean("greeter2", Calculator.class);
+
+		System.out.println(greeter1 == greeter2);
+		
+		ctx.close();
+	}
+}

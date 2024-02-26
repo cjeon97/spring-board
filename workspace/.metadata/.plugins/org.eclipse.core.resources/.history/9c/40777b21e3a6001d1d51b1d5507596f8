@@ -1,0 +1,5 @@
+package examspring01;
+
+public class PasswordCheckException extends RuntimeException {
+
+}

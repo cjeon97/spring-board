@@ -1,0 +1,17 @@
+package calculator;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		GenericXmlApplicationContext ctx =
+				new GenericXmlApplicationContext(
+						"classpath:cal_appContext3.xml");
+		
+		Calculator calculator = ctx.getBean("calculator", Calculator.class);
+		
+		
+		ctx.close();
+	}
+}

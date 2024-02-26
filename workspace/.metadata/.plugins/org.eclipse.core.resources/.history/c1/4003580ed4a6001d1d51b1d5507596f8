@@ -1,0 +1,19 @@
+package calculator;
+
+public class Calculator {
+	
+	private String format;
+	
+	public Calculator() {
+		System.out.println("Greeter Constructor");
+	}
+	
+	public int greet(int int1, int int2) {
+		return String.format(format, guest);
+	}
+	
+	public void setFormat(String format) {
+		this.format = format;
+	}
+	
+}

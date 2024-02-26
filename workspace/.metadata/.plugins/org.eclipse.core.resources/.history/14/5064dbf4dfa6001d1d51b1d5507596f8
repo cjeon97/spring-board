@@ -1,0 +1,11 @@
+package examspring01;
+
+import java.time.LocalDateTime;
+
+public class Member {
+	private Long number;
+	private String memberid;
+	private String memberpw;
+	private String nick;
+	private LocatDateTime regdate;
+}

@@ -1,0 +1,23 @@
+package exam4;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class Main0 {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext ctx = 
+				new GenericXmlApplicationContext("classpath:appContext5.xml");
+		
+		CalculatorBody cb = ctx.getBean("cbAdd", CalculatorBody.class);
+		int result = cb.calculate(1, 2);
+		System.out.println(result);
+		
+		cb = ctx.getBean("cbMin", CalculatorBody.class);
+		System.out.println(cb.calculate(10, 3));
+		
+		ctx.close();
+	}
+}
+
+
+
+

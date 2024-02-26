@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  https://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/aop
+  http://www.springframework.org/schema/aop/spring-aop.xsd">
+	
+	<bean id="target" class="aop15.Target"/>
+	<bean id="before1" class="aop15.BeforeAspect1"/>
+	<bean id="before2" class="aop15.BeforeAspect2"/>
+	<bean id="after1" class="aop15.AfterAspect1"/>
+	<bean id="after2" class="aop15.AfterAspect2"/>
+	
+	<aop:config>
+		<aop:pointcut expression="execution(public Integer *.process(String))" id="myPointcut"/>
+		<aop:aspect ref="before2" order="2">
+			<aop:before method="before2" pointcut-ref="myPointcut"/>
+		</aop:aspect>
+		<aop:aspect ref="before1" order="1">
+			<aop:before method="before1" pointcut-ref="myPointcut"/>
+		</aop:aspect>
+		<aop:aspect ref="after1" order="2">
+			<aop:after method="after1" pointcut-ref="myPointcut"/>
+		</aop:aspect>
+		<aop:aspect ref="after2" order="-1">
+			<aop:after method="after2" pointcut-ref="myPointcut"/>
+		</aop:aspect>
+	</aop:config>
+	
+</beans>
+
+
+
+
+
+
+
+
+
+

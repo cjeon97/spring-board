@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="mycalc.AddCalculator"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="spring01.Greeter"/>
+    <fullyQualifiedTypeName name="calculator.Calculator"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="examspring01.RegisterCommand"/>
+    <fullyQualifiedTypeName name="java.lang.Runtime"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="examspring01.MemberDao"/>
+    <fullyQualifiedTypeName name="examspring01.Assembler"/>
+    <fullyQualifiedTypeName name="examspring01.MemberRegisterService"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,16 @@
+package calculator;
+
+public class Calculator {
+	
+	private double result;
+	
+	public Calculator() {
+		System.out.println("Calculator Constructor");
+	}
+	
+	
+	public void setFormat(String format) {
+		this.format = format;
+	}
+	
+}

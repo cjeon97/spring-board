@@ -1,0 +1,19 @@
+package examspring01;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Assembler assembler = new Assembler();
+		
+		RegisterCommand param = new RegisterCommand();
+		param.setMemberid("tester");
+		param.setMemberpw("1234");
+		param.setMemberpw2("1234");
+		param.setNick("ttt");
+		
+		MemberRegisterService mrs = assembler.getMemberRegisterService();
+		mrs.regist(param);
+		
+		
+	}
+}

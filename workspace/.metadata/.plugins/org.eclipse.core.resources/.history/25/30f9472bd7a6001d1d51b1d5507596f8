@@ -1,0 +1,11 @@
+package exam;
+
+public class AddCalculator {
+	
+	private String operator;
+	
+	public void setOperator(String operator) {
+		this.operator = operator;
+	}
+	
+}

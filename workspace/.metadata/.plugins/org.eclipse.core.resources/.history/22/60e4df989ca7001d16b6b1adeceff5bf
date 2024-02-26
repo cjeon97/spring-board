@@ -1,0 +1,6 @@
+package examspring01;
+
+@SuppressWarnings("serial")
+public class NoSuchMemberIdException extends RuntimeException {
+
+}

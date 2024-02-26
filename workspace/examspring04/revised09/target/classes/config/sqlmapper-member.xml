@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member.repository.mapper.MemberMapper">
+
+	<select id="selectAll" resultType="member">
+		select * from MEMBER
+	</select>
+	
+	<select id="selectOne" parameterType="String" resultType="member">
+		select NO, MEMBER_ID, MEMBER_PW, NICK, REGDATE from MEMBER where MEMBER_ID=#{memberid}	
+	</select>
+	
+	<select id="selectByNo" parameterType="Long" resultType="member">
+		select NO, MEMBER_ID, MEMBER_PW, NICK, REGDATE from MEMBER where NO=#{no}	
+	</select>
+	
+	<insert id="insert" parameterType="member">
+		insert into MEMBER(NO, MEMBER_ID, MEMBER_PW, NICK, REGDATE)
+			values (SEQ_MEMBER.nextval, #{memberid}, #{memberpw}, #{nick}, sysdate)
+	</insert>
+	
+	<update id="update" parameterType="member">
+		update MEMBER set MEMBER_PW=#{memberpw} where MEMBER_ID=#{memberid}
+	</update>
+	
+	<update id="updateMap" parameterType="Map">
+		update MEMBER set MEMBER_PW=#{pw} where MEMBER_ID=#{id}
+	</update>
+	
+	<select id="selectRegdate" parameterType="Map" resultType="member">
+		select * from MEMBER where REGDATE between #{from} and #{to} 
+	    order by REGDATE desc
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+

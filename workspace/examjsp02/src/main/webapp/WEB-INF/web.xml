@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>examjsp02</display-name>
+  
+  <servlet>
+  	<servlet-name>add</servlet-name>
+  	<servlet-class>myservlet.AddServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>div</servlet-name>
+  	<servlet-class>myservlet.DivServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>min</servlet-name>
+  	<servlet-class>myservlet.MinServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>mul</servlet-name>
+  	<servlet-class>myservlet.MulServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>index</servlet-name>
+  	<servlet-class>myservlet.IndexServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>add</servlet-name>
+  	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>div</servlet-name>
+  	<url-pattern>/div</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>min</servlet-name>
+  	<url-pattern>/min</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>mul</servlet-name>
+  	<url-pattern>/mul</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet-mapping>
+  	<servlet-name>index</servlet-name>
+  	<url-pattern>/index</url-pattern>
+  </servlet-mapping> 
+  
+</web-app>

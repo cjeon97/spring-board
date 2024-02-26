@@ -1,0 +1,13 @@
+package examspring02;
+
+public class MemberListPrintService {
+	private MemberDao memberDao;
+	private MemberPrintService memberPrintService;
+	
+	public MemberListPrintService(MemberDao memberDao, MemberPrintService memberPrintService) {
+		this.memberDao = memberDao;
+		this.memberPrintService = memberPrintService;
+	}
+	
+	
+}
