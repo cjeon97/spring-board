@@ -5,15 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시글 삭제</title>
+<title>Delete</title>
 </head>
 <body>
-<p><a href="<c:url value='/board/list'/>"><button>목록으로</button></a></p>
-<p><b>[${command.num}]번, ${command.title}</b></p>
+<p><a href="<c:url value='/board/list'/>"><button>List</button></a></p>
+<p><b>[No.${command.num}], ${command.title}</b></p>
 <form method="post">
-해당 게시글을 삭제하시겠습니까? 
-<p><button type="submit">예</button>
-<a href="<c:url value='/board/detail/${command.num}'/>"><button type="button">아니오</button></a>
+Do you want to delete the post? 
+<p><button type="submit">Yes</button>
+<a href="<c:url value='/board/detail/${command.num}'/>"><button type="button">No</button></a>
 </p>
 </form>
 </body>
