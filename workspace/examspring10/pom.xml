@@ -4,7 +4,6 @@
 	<artifactId>examspring10</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<!-- 설정 파일에서 재사용을 위한 값을 미리 설정해둔 것 -->
 	<properties>
 		<jdk-version>11</jdk-version>
 		<springframework-version>5.3.25</springframework-version>
