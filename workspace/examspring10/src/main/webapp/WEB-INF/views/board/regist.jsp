@@ -6,21 +6,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시글 등록</title>
+<title>Post</title>
 </head>
 <body>
 <form:form>
 <fieldset>
-<legend>게시글 등록</legend>
+<legend>Post</legend>
 	<p>
-		<form:input path="title" placeholder="제목"/>
+		<form:input path="title" placeholder="Title"/>
 		<form:errors path="title"/>
 	</p>
 	<p>
-		<form:textarea path="content" placeholder="내용" cols="25" rows="5"/>
+		<form:textarea path="content" placeholder="Content" cols="25" rows="5"/>
 		<form:errors path="content"/>
 	</p>
-	<p><input type="submit" value="등록"></p>
+	<p><input type="submit" value="post"></p>
 </fieldset>
 </form:form>
 </body>
